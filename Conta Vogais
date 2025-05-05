@@ -1,0 +1,16 @@
+# Conta_vogais
+frase = input("Digite uma frase:")
+vogais_encontradas = []  # Lista para armazenar as vogais encontradas
+conta_vogais= 0 #começou a contar em 0
+for letra in frase:
+ if letra in "AEIOUaeiou":  # Verifica se a letra é uma vogal
+     vogais_encontradas.append(letra)  # Adiciona a vogal na lista
+
+ conta_vogais +=1 #Soma 1 letra vogal ao contador
+
+# Resultado da quantidade de vogais na frase
+print(f"A frase tem {conta_vogais} vogais.")
+# Resultado das vogais encontradas
+print(f"As vogais na frase são: {', '.join(vogais_encontradas)}") #.join() é
+# um comando mágico que ajuda a juntar (ou unir) as coisas que estão na lista em uma única frase.
+#vai colocar uma vírgula e um espaço entre eles.
