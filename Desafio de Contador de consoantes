@@ -1,0 +1,22 @@
+print('Bem vindo ao desafio Python, Contador de consoantes. Vamos começar?')
+frase = input('Digite uma frase: ')
+
+# Definir as vogais
+vogais = "AEIOUaeiou"
+
+
+# Função para contar consoantes
+def contador_consoantes(frase):
+    contador = 0  # Inicializar contador de consoantes
+
+    # Loop para verificar cada letra na frase
+    for letra in frase:
+        # Verificar se a letra é uma consoante
+        if letra.isalpha() and letra not in vogais:
+            contador += 1  # Incrementar contador se for consoante
+
+    return contador  # Retornar o número de consoantes
+
+# Chamar a função e mostrar o resultado
+resultado = contador_consoantes(frase)
+print(f"Quantidade de consoantes: {resultado}")
