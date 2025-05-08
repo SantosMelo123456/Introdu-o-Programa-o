@@ -1,0 +1,19 @@
+# Contador de caracteres repetidos em uma frase #Eu Linda, pedi para o chatgpt criar desafios em python para eu treinar
+
+frase = input('Digite uma frase:').replace(" ", "")  #Aqui, a função do replace é de remover os espaços entre as palavras, ficando assim, todas as palavras da frase coladinhas 
+
+# Aplicando o contador de caracteres
+
+contador_caracteres = {} #Essa variavel é um dicionário vazio, onde ele guarda pares de letras ou quantas vezes ela aparece
+
+# Loop para contar as letras
+for letra in frase: #Esse loop percorre cada letra na frase
+    if letra in contador_caracteres:
+        contador_caracteres[letra] += 1  #Se a letra já existe na frase, aumenta 1
+    else:
+        contador_caracteres[letra] = 1  #Se a letra não existe, adiciona com valor 1
+
+# Resultado
+print("Contagem das letras na frase:") #É o comando que irá imprimir a frase que dirá o resultado do jogo
+for letra, quantidade in contador_caracteres.items(): #O for vai percorrer esses pares de um por um. items é um método que você pode usar em um dicionário
+    print(f"{letra}: {quantidade}") 
